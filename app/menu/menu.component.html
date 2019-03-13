@@ -1,0 +1,25 @@
+<table class= "table table-bordered table-hover">
+  <thead>
+      <tr>
+          <th>foodId</th>
+          <th>fname</th>
+          <th>fDescription</th>
+          <th>vId</th>
+          <th>Price</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let menu of menus'>
+          <td>{{menu.foodId}}</td>
+          <td>{{menu.fname}}</td>
+          <td>{{menu.fDescription}}</td>
+          <td>{{menu.vId}}</td>
+          <td>{{menu.price}}</td>
+      </tr>
+      <tr *ngIf="!menus || menus.length==0">
+          <td colspan="5">
+              No menus to display
+          </td>
+      </tr>
+  </tbody>
+</table>

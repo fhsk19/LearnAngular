@@ -1,0 +1,35 @@
+<p>
+  databinding works! <br>
+  custom Input: {{customInputAttr}}
+</p>
+<h3> Learning InterPolation</h3>
+This is string interpolation : {{stringInterpolation}}
+<br>
+This is number interpolation : {{numberInterpolation}}
+<br>
+One more example: <br>
+Number Interpolation: {{10+20+50}} <br>
+
+<h4>
+  &nbsp; &nbsp; html way:
+  <input type = "text" name= "username" value="Faisal"/> <br/>
+  &nbsp; &nbsp; String Interpolation way:
+  <input type = "text" name= "username" value={{fname}}/> <br/>
+  &nbsp; &nbsp; property binding way:
+  <input type = "text" name= "username" [value]="fname"/> <br/>
+  Event Binding: <br>
+  &nbsp; &nbsp; html way:
+  <button onclick="alert('HTML Button clicked!')">
+  CLick HTML button</button>
+  <br>
+  Event binding way:
+  &nbsp; &nbsp;
+  <button (click) = "myalert()">
+    Click event button
+  </button>
+
+  <br> Two way binding:
+  <input type = "text" name = "uname" [(ngModel)] = "fname">
+
+  <button [disabled]='disableflag' (click)='toggle()'>Click me!</button>
+</h4>

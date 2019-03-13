@@ -1,0 +1,22 @@
+<div style="background-color:darkkhaki">
+  <h3>
+    lifecylelearn-parent  component!
+    Your Text:
+  <br>
+    <input type="text" name="username"
+          [(ngModel)]="userText"/><br/><br/>
+  </h3>
+
+  <div style="background-color:darkorange" >
+    <h3>
+  <app-lifecyclelearn [simpleInput]='userText'
+  (evDataChanged) = "dispFromChild($event)"></app-lifecyclelearn>
+  </h3>
+  </div>
+  <h3>
+    <br>
+    Data from child: {{val}}
+  </h3>
+
+
+  </div>

@@ -1,0 +1,48 @@
+<table  class="table table-bordered table-hover">
+  <thead>
+      <tr style=" background-color:darkgray">
+          <th>Code</th>
+          <th>Title</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Annual Salary</th>
+          <th>Date of Birth</th>
+          <th>Provident fund</th>
+          <th>CTC</th>
+          <th>Comment</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let employee of employees'>
+          <td>{{employee.code}}</td>
+          <td>
+             <select
+             [(ngModel)]='employee.title'
+             (change)="onchangeTitle(employee.title)">
+            <option *ngFor="let c of title"
+            [value]="c.value">
+            {{c.text}} </option>
+            </select> </td>
+          <td>{{employee.name}}</td>
+          <td>{{employee.gender}}</td>
+          <td>{{employee.annualSalary}}</td>
+          <td>{{employee.dateOfBirth}}</td>
+          <td>
+          <input type="number" class="form-control"
+          id="pf"
+          [(ngModel)]="employee.pf" name="pf"
+          #code="ngModel"> </td>
+          <td>{{calc(employee)}}</td>
+          <td>
+              <input type="string" class="form-control"
+              id="comment"
+              [(ngModel)]="employee.comment" name="comment"
+              #code="ngModel"> </td>
+      </tr>
+      <tr *ngIf="!employees || employees.length==0">
+          <td colspan="7">
+              No employees to display
+          </td>
+      </tr>
+  </tbody>
+</table>

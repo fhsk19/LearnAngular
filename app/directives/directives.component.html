@@ -1,0 +1,22 @@
+Using HTML class attributes:
+<button class='colorClass'>My Button</button> <br>
+Normal Button - html:
+<button style="color: red">MyButton</button>
+Using property binding:
+  <button class='colorClass' [class]='classesToApply'>My Button</button><br>
+
+true or false condition:
+  <button class='colorClass'
+   [class.boldClass]='applyBoldClass'>
+      My Button </button> <br>
+Using ANGULAR ngClass DIRECTIVE:
+      <button [ngClass]='addClassess()'>
+         My Button </button> <br>
+
+         Using property binding of angular:
+  <button style="color:red"
+      [style.font-weight]="isBold ? 'bold' : 'normal'">
+      My button </button><br/>
+  Using NgStyle Directive:
+    <button style='color:red'
+       [ngStyle]="addStyles()">My Button</button><br>
